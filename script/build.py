@@ -20,7 +20,8 @@ def main():
     if not os.path.exists(skia_dir):
       zip = skia_dir + '.zip'
       # custom skia build - no direct3d version
-      build_utils.fetch('https://store5.gofile.io/download/f138e8ba-355e-496e-9e7b-daceee22db0f/Skia-m109-664500fa93-windows-Release-x64.zip')
+      # build_utils.fetch('https://github.com/HumbleUI/SkiaBuild/releases/download/' + args.skia_release + '/' + zip, zip)
+      build_utils.fetch('https://store5.gofile.io/download/f138e8ba-355e-496e-9e7b-daceee22db0f/+ args.skia_release + '/' + zip, zip')
       with zipfile.ZipFile(zip, 'r') as f:
         print("Extracting", zip)
         f.extractall(skia_dir)
