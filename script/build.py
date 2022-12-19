@@ -73,12 +73,12 @@ def main():
 
   # Copy files
   target = 'target/classes/io/github/humbleui/skija'
-  if common.classifier == 'macos-x64':
-    build_utils.copy_newer('build/libskija_x64.dylib', target + '/macos/x64/libskija_x64.dylib')
-  elif common.classifier == 'macos-arm64':
-    build_utils.copy_newer('build/libskija_arm64.dylib', target + '/macos/arm64/libskija_arm64.dylib')
-  elif common.classifier == 'linux':
-    build_utils.copy_newer('build/libskija.so', target + '/linux/libskija.so')
+ # if common.classifier == 'macos-x64':
+   # build_utils.copy_newer('build/libskija_x64.dylib', target + '/macos/x64/libskija_x64.dylib')
+ # elif common.classifier == 'macos-arm64':
+   # build_utils.copy_newer('build/libskija_arm64.dylib', target + '/macos/arm64/libskija_arm64.dylib')
+ # elif common.classifier == 'linux':
+   # build_utils.copy_newer('build/libskija.so', target + '/linux/libskija.so')
   elif common.classifier == 'windows':
     build_utils.copy_newer('build/skija.dll', target + '/windows/skija.dll')
     build_utils.copy_newer(skia_dir + '/out/' + build_type + '-' + build_utils.arch + '/icudtl.dat',
