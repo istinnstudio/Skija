@@ -37,7 +37,7 @@ def main():
     "-DCMAKE_BUILD_TYPE=" + build_type,
     "-DSKIA_DIR=" + skia_dir,
     "-DSKIA_ARCH=" + build_utils.arch]
-    + (["-DCMAKE_OSX_ARCHITECTURES=" + {"x64": "x86_64", "arm64": "arm64"}[build_utils.arch]] if build_utils.system == "macos" else [])
+   # + (["-DCMAKE_OSX_ARCHITECTURES=" + {"x64": "x86_64", "arm64": "arm64"}[build_utils.arch]] if build_utils.system == "macos" else [])
     + [".."],
     cwd=os.path.abspath('build'))
 
