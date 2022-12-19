@@ -20,7 +20,7 @@ def main():
     if not os.path.exists(skia_dir):
       zip = skia_dir + '.zip'
       # custom skia build - no direct3d version
-      build_utils.fetch('https://www.dropbox.com/s/27lzjoob207kpzr/Skia-m109-664500fa93-windows-Release-x64.zip?dl=1', zip)
+      build_utils.fetch('https://www.mediafire.com/file/ixekqatrulamfbj/Skia-m109-664500fa93-windows-Release-x64.zip', zip)
       with zipfile.ZipFile(zip, 'r') as f:
         print("Extracting", zip)
         f.extractall(skia_dir)
